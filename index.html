@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <title>My Quiz App</title>
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <!-- start quiz button-->
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!--info Box-->
+    <div class="info_Box">
+        <div class="info_title">
+            <span>Some Rules of this Quiz</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each Question.</div>
+            <div class="info">2. Once you select your answer you can't reselect.</div>
+            <div class="info">3. You can't select any option when time goes off.</div>
+            <div class="info">4. You can exit the Quiz while playing</div>
+            <div class="info">5. You will get points on the basis of your correct answer.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+
+
+    <!--Quiz Box-->
+    <div class="quiz_box">
+        <header>
+            <div class="title">My Quiz App</div>
+            <div class="timer">
+                <div class="time_text">Time Left</div>
+                <div class="time_sec">15</div>
+                <div class="time_line"></div>
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!--<span>what does HTML stands for?</span>-->
+            </div>
+            <div class="option_list">
+              <!-- <div class="option">
+                    <span>hyper text processor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>hyper text markup language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                 <div class="option">
+                    <span>hyper text multiple language</span>
+                </div>
+                <div class="option">
+                    <span>hyper tool multi language</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>-->
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+             <!--   <span><p>2</p>of <p>5</p>Questions</span>-->
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+</div>
+         <!--Result Box-->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz</div>
+        <div class="score_text">
+            <!--<span>and sorry. You got only <p> 2 </p> out of <p> 5 </p> </span>-->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Ouiz</button>
+            <button class="quit">Quit Ouiz</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+
+</body>
+</html>
