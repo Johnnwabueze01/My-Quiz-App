@@ -5,9 +5,30 @@ const exit_btn = document.querySelector(".buttons .quit");
 const continue_btn = document.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const option_list = document.querySelector(".option_list");
-const timeCount = quiz_box.querySelector(".timer .time_sec")
-const timeline = quiz_box.querySelector("header .time_line")
-const timeoff = quiz_box.querySelector("header .time_text")
+const timeCount = quiz_box.querySelector(".timer .time_sec");
+const timeoff = quiz_box.querySelector("header .time_text");
+
+document.addEventListener('DOMContentLoaded', function() {
+    const text = "click the button to begin your Quiz";
+    let index = 0;
+    const typewriterTextElement = document.getElementById("typewriter");
+  
+    function typeWriter() {
+      if (index < text.length) {
+        typewriterTextElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // Adjust typing speed (milliseconds)
+      } else {
+        // After typing is complete, fade in the content
+        document.querySelector('.content').classList.add('show');
+        // Hide the overlay
+        document.querySelector('.overlay').style.display = 'none';
+      }
+    }
+  
+    // Call typeWriter function when the page loads
+    typeWriter();
+  });
 
 //if start quiz button ic clicked
 start_btn.onclick = ()=>{
@@ -25,16 +46,13 @@ continue_btn.onclick = ()=>{
     quiz_box.classList.add("activeQuiz");
     showQuestions(0);
     queCounter(1);
-    starttimer(15);
-    starttimerline(0)
+    starttimer(20);
 }
 
 let que_count = 0;
 let que_numb = 1;
 let counter;
-let counterline;
-let timevalue = 15;
-let widthvalue = 0;
+let timevalue = 20;
 let userscore = 0;
 
 const next_btn = quiz_box.querySelector(".next_btn");
@@ -47,20 +65,14 @@ restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz");
     let que_count = 0;
     let que_numb = 1;
-    let timevalue = 15;
-    let widthvalue = 0;
+    let timevalue = 20;
     let userscore = 0;
     showQuestions(que_count);
     queCounter(que_numb);
     clearInterval(counter);
     starttimer(timevalue)
-    clearInterval(counterline);
-    starttimerline(widthvalue);
     next_btn.style.display = "none";
     timeoff.textContent = "Time Left";
-
-
-
 }
 
 quit_quiz.onclick = ()=>{
@@ -76,14 +88,11 @@ next_btn.onclick = ()=>{
     queCounter(que_numb);
     clearInterval(counter);
     starttimer(timevalue)
-    clearInterval(counterline);
-    starttimerline(widthvalue);
     next_btn.style.display = "none";
     timeoff.textContent = "Time Left";
 
     }else{
         clearInterval(counter);
-        clearInterval(counterline);
         console.log("Question Completed");
         showResultBox();
     }
@@ -111,7 +120,6 @@ let crossicon = '<div class="icon cross"><i class="fas fa-times"></i></div>'
 
 
 function optionselected(answer){
-    clearInterval(counterline);
     clearInterval(counter);
     let userAns = answer.textContent;
     let correctAns = questions[que_count].answer;
@@ -148,11 +156,11 @@ function showResultBox(){
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeresult");
     const scoretext = result_box.querySelector(".score_text");
-    if(userscore > 3){
+    if(userscore > 48){
         let scoretag =  '<span>congrats. You got <p>'+ userscore +'</p> out of <p>'+ questions.length +'</p> </span>';
         scoretext.innerHTML = scoretag ;
     }
-    else if(userscore > 3){
+    else if(userscore > 48){
         let scoretag =  '<span>Nice. You got only <p>'+ userscore +'</p> out of <p>'+ questions.length +'</p> </span>';
         scoretext.innerHTML = scoretag ;
     }
@@ -194,16 +202,6 @@ function starttimer(time){
     }
 }
 
-function starttimerline(time){
-    counterline = setInterval(timer, 29);
-    function timer(){
-        time += 1;
-        timeline.style.width = time + "px";
-        if(time > 549){
-            clearInterval(counterline);
-        }
-    }
-}
 
 
 
