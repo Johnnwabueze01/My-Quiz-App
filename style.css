@@ -7,6 +7,7 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: 0;
+    box-sizing: border-box;
 
 }
 body{
@@ -374,8 +375,8 @@ footer .next_btn:hover{
   .info_box,
   .quiz_box,
   .result_box {
-    max-width: 90%;
-    overflow: hidden;
+    max-width: 100%;
+    overflow: scroll;
     font-size: 14px;
 
   }
