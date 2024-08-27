@@ -41,7 +41,7 @@ body{
     transform: translate(-50%, -50%) scale(1);
 
 }
-h1{
+.wel{
     top: 25%;
     left: 45%;
     position: absolute;
