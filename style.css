@@ -51,6 +51,8 @@ body{
     top: 35%;
     left: 40%;
     position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 .typewriter-container {
     text-align: center;
