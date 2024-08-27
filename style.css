@@ -48,11 +48,12 @@ body{
     color: #54ff05;
 }
 .start{
-    top: 35%;
+    top: 40%;
     left: 40%;
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .typewriter-container {
     text-align: center;
