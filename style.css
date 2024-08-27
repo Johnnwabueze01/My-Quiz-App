@@ -380,14 +380,14 @@ footer .next_btn:hover{
     transition: all ease 0.3s;
 }
 
-@media (max-width:480px)  { 
+@media (min-width:360px)  { 
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
   .info_box,
   .quiz_box,
   .result_box {
     max-width: 100%;
     overflow: scroll;
-    font-size: 14px;
+    
 
   }
 }
