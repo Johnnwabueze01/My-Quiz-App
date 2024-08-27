@@ -42,7 +42,7 @@ body{
 
 }
 .wel{
-    top: 25%;
+    top: 35%;
     left: 45%;
     position: absolute;
     color: #54ff05;
@@ -58,6 +58,9 @@ body{
 .typewriter-container {
     text-align: center;
     color: white;
+    top: 40%;
+    left: 40%;
+    position: absolute;
   }
   
   .typewriter-text {
