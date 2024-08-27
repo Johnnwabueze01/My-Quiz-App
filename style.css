@@ -46,6 +46,8 @@ body{
     left: 45%;
     position: absolute;
     color: #54ff05;
+    font-size: 40px;
+    font-weight: 800;
 }
 .start{
     top: 40%;
@@ -68,8 +70,9 @@ body{
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: 2px;
-    font-size: 24px;
+    font-size: 30px;
     animation: typing 0.5s steps(30, end);
+      font-weight: 600;
   }
   
  
