@@ -41,7 +41,7 @@ body{
     transform: translate(-50%, -50%) scale(1);
 
 }
-.wel{
+/*.wel{
     top: 35%;
     left: 45%;
     position: absolute;
@@ -75,7 +75,7 @@ body{
     animation: typing 0.5s steps(30, end);
       font-weight: 600;
   }
-  
+  */
  
 .start_btn button{
     font-size: 25px;
